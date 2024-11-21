@@ -8,7 +8,12 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "build:staging": "ng build --configuration=staging",
+    "build:development": "ng build --configuration=development",
+    "deploy:staging": "npm run build:staging && firebase use staging && firebase deploy",
+    "deploy:development": "npm run build:staging && firebase use development && firebase deploy",
+    "deploy:production": "npm run build:staging && firebase use production && firebase deploy"
   },
   "private": true,
   "dependencies": {
