@@ -82,6 +82,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
+            "production": {
+              "buildTarget": "productivity-planner:build:production"
+            },
             "staging": {
               "buildTarget": "productivity-planner:build:staging"
             },
